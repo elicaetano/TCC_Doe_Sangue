@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Pagina de Navegação</title>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/estilo.css">
+
+	<script src="https://kit.fontawesome.com/db3a9100e9.js"></script>
+</head>
+<body>
+<!--
+	<div class="centroNavegacao">
+		<header class="cabelhoNavegacao">
+			<div class="logo">
+				<a href="principal.html"><img src="assets/image/logo.png"></a>
+			</div>	
+			<div class="navegacao">
+			     <nav class="nav nav-pills nav-fill">
+					 <a style="color:black;" class="nav-item nav-link " href="hemocentro.html">Conheca o Hemocentro</a>
+					  <a style="color:black;"class="nav-item nav-link" href="navegacao.html">Seja um Doador</a>
+					  <a style="color:black;"class="nav-item nav-link" href="doencaSangue.html">Doenças do Sangue</a>
+					  <a style="color:black;"class="nav-item nav-link" href="perguntas.html">Perguntas Frequentes</a>
+					  <a style="color:black;"class="nav-item nav-link" href="contato.html">Contato</a>
+				 </nav>
+			 </div>
+		</header>
+		<div class="carrossel">
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="2000">
+				  <ol class="carousel-indicators">
+				    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				  </ol>
+				  <div class="carousel-inner">
+				    <div class="carousel-item active">
+				      <img class="d-block w-100" src="assets/image/rolagem-1.png" alt="Primeiro Slide">
+				    </div>
+
+				    <div class="carousel-item">
+				     <a href="doencaSangue.html"> <img class="d-block w-100" src="assets/image/rolagem-2.jpg" alt="Segundo Slide"></a>
+				    </div>
+
+				    <div class="carousel-item">
+				     <a href="cadastroHospital.php"></a> <img class="d-block w-100" src="assets/image/rolagem.jpg" alt="Terceiro Slide">
+				    </div>
+				  </div>
+
+				  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Anterior</span>
+				  </a>
+				  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Próximo</span>
+				  </a>
+			</div>
+		</div>	
+	-->
+			<aside class="asideHospital">
+				<h1 class="titulo">Login Hospitais</h1><br>
+    		  	
+    		  	<form action="loginHospital.php" method="post" class="formHopital">
+	        	    <div>
+	                    <input type="text"  style="height:38px; float:left; "size="46"  id="cnpj" name="cnpj"  placeholder="Digite o CNPJ" maxlength="80" required="" >
+	                </div><br><br>
+                
+                  	<div>
+                    	<label>Senha</label><br>
+                        <input type="password"  style="height:38px; float:left; "size="40"  id="senhaHospital" name="senha"  placeholder="Digite sua senha" maxlength="8" required="" >
+                    	
+                    <div> 
+                          <button type="button" onclick="mostrarSenha()"><i class="far fa-eye fa-2x"></i></button>
+                      	</div><br>
+                 	</div>
+
+                    <button type="submit" class="btn btn-dark" title="Enviar as Informações para login">Login</button>
+                  	<button type="reset" class="btn btn-danger" title="Apagar">Apagar</button><br>
+                  	<a style="color:black;"href="cadastroHospital.php">Cadastre-se</a>
+				</form>
+			</aside>
+		  
+			<script type="text/javascript">
+	            function mostrarSenha()
+	            {
+	              var tipo=document.getElementById('senhaHospital');
+	             if(tipo.type=="password")
+	                {
+	                  tipo.type="text";
+	                }
+	              else
+	              {
+	                tipo.type="password";
+	              }
+	            }
+        
+            </script>
+	
+
+			<aside class ="asideDoadores">
+				<h1 class="titulo">Login Doadores</h1><br>
+    		 	<form action="loginDoador.php" method="post">
+        	      <div class="formDoador">
+		                <div>
+		                    <input type="text"  style="height:38px; float:left; "size="46"  id="cpf" name="cpf"  placeholder="Digite o CPF" maxlength="80" required="" >
+		                </div><br><br>
+		                
+		                <div>
+		                    <label>Senha</label><br>
+		                     <input type="password"  style="height:38px; float:left; "size="40"  id="senhaDoador" name="senha"  placeholder="Digite sua senha" maxlength="8" required="" >
+		                    <div>
+                                <button type="button" onclick="mostrarSenha3()"><i class="far fa-eye fa-2x"></i></button>
+		     	           	</div><br>
+		                </div>
+		              	               
+		                 <button type="submit" class="btn btn-dark" title="Enviar as Informações para login" >Login</button>
+		                 <button type="reset" class="btn btn-danger" title="Apagar">Apagar</button><br>
+		                 <a style="color:black;"href="cadastroDoador.php">Cadastre-se</a>
+	               </div>  
+    		 	</form>
+			</aside>
+		</div>
+		<script type="text/javascript">
+	       function mostrarSenha3()
+	       {
+	    	  var tipo=document.getElementById('senhaDoador');
+	          if(tipo.type=="password")
+	          {
+	            tipo.type="text";
+	          }
+	          else
+	          {
+	            tipo.type="password";
+	          }
+	        }
+        </script> 
+ 
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>	
+</body>
+</html>
